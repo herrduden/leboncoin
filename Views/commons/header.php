@@ -55,25 +55,31 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="#" class="nav-item nav-link active">Accueil</a>
-                        <a href="#" class="nav-item nav-link">About</a>
+                        <a href="#" class="nav-item nav-link">A propos</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Catégories</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="#" class="dropdown-item">Property List</a>
-                                <a href="#" class="dropdown-item">Property Type</a>
-                                <a href="#" class="dropdown-item">Property Agent</a>
+                                <a href="#" class="dropdown-item">Véhicule</a>
+                                <a href="#" class="dropdown-item">Mode</a>
+                                <a href="#" class="dropdown-item">jeu de société</a>
+                                <a href="#" class="dropdown-item">jeu vidéo</a>
+                                <a href="#" class="dropdown-item">Livre/BD/Manga</a>
+                                <a href="#" class="dropdown-item">Musique</a>
+                                <a href="#" class="dropdown-item">Sport</a>
+                                <a href="#" class="dropdown-item">Autres</a>
+
                             </div>
                         </div>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Moi</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Error</a>
+                                <a href="testimonial.html" class="dropdown-item">Mes favoris</a>
+                                <a href="404.html" class="dropdown-item">Messages</a>
                             </div>
                         </div>
                         <a href="<?php echo $GLOBALS['__HOST__']?>log-in" class="nav-item nav-link">Se connecter</a>
                     </div>
-                    <a href="<?php echo $GLOBALS['__HOST__']?>deposer-une-annonce" class="btn btn-primary px-3 d-none d-lg-flex">Déposer une annonce</a>
+                    <a href="<?php echo $GLOBALS['__HOST__']?>vendre" class="btn btn-primary px-3 d-none d-lg-flex">Vendre</a>
                 </div>
             </nav>
         </div>

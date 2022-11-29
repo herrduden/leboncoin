@@ -31,6 +31,15 @@
                     case "deposer-une-annonce": // TODO:
                         echo "Requested URL is deposer-une-annonce";
                         break;
+                    case 'sign-up':
+                        $controller = new LoginController("sign-up");
+                        break;
+
+                    case "formvalidation":
+                        $controller = new LoginController();
+                        $controller->formvalidation();
+                        break;
+                    
                     default: // TODO:
                         echo "URL NOT FOUND 404 !";
                 }
@@ -43,4 +52,3 @@
     
     // Start WebApp
     Index::main();
-?>

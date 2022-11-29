@@ -1,11 +1,11 @@
 <?php
-
+require_once("Models/Model.php");
     class LoginController{
 
         private $viewName;
         private $parent;
 
-        public function __construct($viewName)
+        public function __construct($viewName=null)
         {
             // Je récupére le nom de la vue que je dois charger...
             $this->viewName = $viewName;
@@ -13,9 +13,28 @@
             // $this->parent = construit le chemin en auto vers le dossier contenant les views...
             $this->parent = str_replace("\Controllers", "",__DIR__)."\\Views\\";
             // Ici je charge la page en question...
-            $this->loadView();
+            
+            if($this->viewName!=null){
+                 $this->loadView();
+            }
 
         }
+
+        public function formvalidation(){
+            if(isset($_POST)&& !empty($_POST)){
+                //je dois appeler le model 
+                $model= new Model();
+                $status =$model -> addUser($_POST['username'],$_POST['email'],$_POST["tel"],$_POST['password']);
+                if ($status){
+                    $GLOBALS['RECORDSTATUS']=true;
+                }else{
+                    $GLOBALS['RECORDSTATUS']=false;
+
+                }
+                header(sprintf('Location: %s%s',$GLOBALS["__HOST__"],"sign-up"));
+            }
+        }
+
         
         public function loadView(){
             // Etant donné que notre header( en tête ) ne changera jamais entre les views alors

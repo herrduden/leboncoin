@@ -29,6 +29,7 @@
                                     </div>
                                 </div>
                             </form>
+                            <a href="<?php echo $GLOBALS["__HOST__"].'sign-up'; ?>">créer un compte </a> 
                         </div>
                     </div>
                 </div>

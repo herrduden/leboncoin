@@ -44,7 +44,6 @@ class Model
             $queryPrepared->execute(array("email" => $email, "pwd" => $pwd));
             $resultSet = $queryPrepared->fetch(PDO::FETCH_ASSOC);
             if (!empty($resultSet)) {
-                $_SESSION['email'] = $resultSet->email;
                 return $resultSet;
             }
             return NULL;

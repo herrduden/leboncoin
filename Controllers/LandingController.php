@@ -26,5 +26,3 @@
             require_once($this->parent."commons\\footer.php");
         }
     }
-
-?>
